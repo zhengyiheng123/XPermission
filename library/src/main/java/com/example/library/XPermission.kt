@@ -15,8 +15,7 @@ object XPermission {
             existedFragment as InvisibleFragment
         } else {
             val invisibleFragment = InvisibleFragment()
-            fragmentManager.beginTransaction().add(invisibleFragment, TAG)
-            fragmentManager.beginTransaction().commitNow()
+            fragmentManager.beginTransaction().add(invisibleFragment, TAG).commitNow()
             invisibleFragment
         }
         fragment.requestNow(callBack, *permissions)
